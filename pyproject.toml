@@ -1,0 +1,20 @@
+[project]
+name = "sft-loss-masking-and-packing"
+version = "0.1.0"
+description = "One real SFT run where the interesting result is the ablation: prompt-token loss masking on/off, and sequence packing with a correct vs a naively-wrong attention mask."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
